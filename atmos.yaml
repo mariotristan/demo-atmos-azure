@@ -1,0 +1,21 @@
+base_path: "./"
+
+components:
+  terraform:
+    base_path: "components/terraform"
+    apply_auto_approve: false
+    deploy_run_init: true
+    init_run_reconfigure: true
+    auto_generate_backend_file: true # review with even when true is createing empty backend file
+    backend_type: azurerm
+  
+stacks:
+  base_path: "stacks"
+  included_paths:
+    - "deploy/**/*"
+  excluded_paths:
+    - "**/_defaults.yaml" #test with default file not excluded
+  name_pattern: "{stage}"
+logs:
+  level: Info
+  file: "/dev/stderr"
