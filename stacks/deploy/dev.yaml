@@ -1,0 +1,11 @@
+components:
+  terraform:
+    demo-app:
+      vars:
+        location: "eastus"
+        stage: "dev"
+        resource_group_name: "DemoRG"
+        vm_name: "HelloWorldVM"
+        vm_size: "Standard_B1s"
+        admin_username: "adminuser"
+        public_key_path: "~/.ssh/id_rsa.pub"

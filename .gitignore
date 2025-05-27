@@ -46,3 +46,5 @@ backend.tf.json
 *.tfplan
 # Terraform workspace files
 .terraform.lock.hcl
+
+*.tfvars.json
